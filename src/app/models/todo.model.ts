@@ -5,6 +5,10 @@ const todoSchema: Schema = new Schema({
     required: true,
     type: String, // String with a capital letter
   },
+  userEmail: {
+    required: false,
+    type: String,
+  },
 });
 
 export const Todo = models.Todo || model("Todo", todoSchema);

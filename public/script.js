@@ -46,7 +46,7 @@ const app = new Vue({
       if (event) event.preventDefault()
 
       this.error = null;
-      request('/api/todos/' + todo._id, 'DELETE')
+      request('/api/todos/' + todo.id, 'DELETE')
         .then(() => {
           const index = this.todos.indexOf(todo);
           this.todos.splice(index, 1);

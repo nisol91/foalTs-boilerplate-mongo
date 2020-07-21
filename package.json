@@ -28,7 +28,9 @@
   },
   "dependencies": {
     "@foal/core": "^1.0.0",
+    "@foal/mongodb": "^1.11.0",
     "@foal/mongoose": "^1.0.0",
+    "@foal/password": "^1.9.0",
     "mongoose": "^5.4.9",
     "source-map-support": "^0.5.1"
   },

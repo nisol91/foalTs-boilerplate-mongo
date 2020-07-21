@@ -8,12 +8,13 @@ import { Todo } from "../app/models";
 export const schema = {
   properties: {
     text: { type: "string" },
+    userEmail: { type: "string", format: "email" },
   },
   required: ["text"],
   type: "object",
 };
 
-export async function main(args: { text: string }) {
+export async function main(args: { text: string; userEmail: string }) {
   // Create a new connection to the database.
   const uri = Config.getOrThrow("mongodb.uri", "string");
   connect(uri, {
@@ -25,6 +26,7 @@ export async function main(args: { text: string }) {
   // Create a new task with the text given in the command line.
   const todo = new Todo();
   todo.text = args.text;
+  todo.userEmail = args.userEmail;
 
   try {
     // Save the task in the database and then display it in the console.

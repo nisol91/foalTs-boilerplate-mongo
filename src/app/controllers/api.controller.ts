@@ -12,6 +12,7 @@ import {
 } from "@foal/core";
 import { Todo } from "../models/todo.model";
 
+@JWTRequired({ user: fetchUser(User) })
 export class ApiController {
   @Get("/")
   index(ctx: Context) {
