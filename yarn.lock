@@ -36,10 +36,36 @@
     pump "~3.0.0"
     reflect-metadata "~0.1.13"
 
+"@foal/core@^1.11.1":
+  version "1.11.1"
+  resolved "https://registry.yarnpkg.com/@foal/core/-/core-1.11.1.tgz#04ba1e289d8c0c0420c033ab76063aef32a4f0d0"
+  integrity sha512-hCl/EBCmJkGwVCMWq3/m6sOg158w7GndPWxRBX0avxq40EISNfzBEgpVGT8zRlpFutFy1OcbqXGe87ZprVjgDA==
+  dependencies:
+    ajv "~6.12.0"
+    cookie-parser "~1.4.4"
+    express "~4.17.1"
+    mime "~2.4.4"
+    morgan "~1.10.0"
+    pump "~3.0.0"
+    reflect-metadata "~0.1.13"
+
+"@foal/mongodb@^1.11.0":
+  version "1.11.1"
+  resolved "https://registry.yarnpkg.com/@foal/mongodb/-/mongodb-1.11.1.tgz#a572da2417acaa9bf70bb22bcac1500c4bc6d732"
+  integrity sha512-tvZ44h16SbVT18RxB+jiYSaR2l3gBqR+PbFDm0mmxWhnIV61yNFFn3myEFoMxm9jApDz7V3kG9OifYT1RzQ4Lw==
+  dependencies:
+    "@foal/core" "^1.11.1"
+    mongodb "~3.5.0"
+
 "@foal/mongoose@^1.0.0":
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/@foal/mongoose/-/mongoose-1.9.0.tgz#1b514deaf4e397b1e8d6393e8b18cecf246369c1"
   integrity sha512-uooWGlDZ9PMlYBgScjVPxJ20vMN3XyEJYbjX9YQ/McP6Xin9UhOtpN2dV72qRCJg3jgiX8IKSDfnWluqdEx3dA==
+
+"@foal/password@^1.9.0":
+  version "1.11.1"
+  resolved "https://registry.yarnpkg.com/@foal/password/-/password-1.11.1.tgz#757feef40d8e2526aebbd91ae5629ba0438d1b91"
+  integrity sha512-hwtw5x4h87n6qi91CG+gZ3ku2Wk7tDurSGdtdOoacKKnGKnIfAKeGCG973zk4zBDq8L8URE+rq8SxULtawcW4A==
 
 "@types/color-name@^1.1.1":
   version "1.1.1"
@@ -230,9 +256,9 @@ basic-auth@~2.0.1:
     safe-buffer "5.1.2"
 
 bl@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/bl/-/bl-2.2.0.tgz#e1a574cdf528e4053019bb800b041c0ac88da493"
-  integrity sha512-wbgvOpqopSr7uq6fJrLH8EsvYMJf9gzfo2jCsL2eTy75qXPukA4pCgHamOQkZtY5vmfVtjB+P3LNlMHW5CEZXA==
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/bl/-/bl-2.2.1.tgz#8c11a7b730655c5d56898cdc871224f40fd901d5"
+  integrity sha512-6Pesp1w0DEX1N550i/uGV/TqucVL4AM/pgThFSN/Qq9si1/DF9aIHs1BxD8V/QU0HoeHO6cQRTAuYnLPKq1e4g==
   dependencies:
     readable-stream "^2.3.5"
     safe-buffer "^5.1.1"
@@ -1462,6 +1488,19 @@ mongodb@3.5.9:
   version "3.5.9"
   resolved "https://registry.yarnpkg.com/mongodb/-/mongodb-3.5.9.tgz#799b72be8110b7e71a882bb7ce0d84d05429f772"
   integrity sha512-vXHBY1CsGYcEPoVWhwgxIBeWqP3dSu9RuRDsoLRPTITrcrgm1f0Ubu1xqF9ozMwv53agmEiZm0YGo+7WL3Nbug==
+  dependencies:
+    bl "^2.2.0"
+    bson "^1.1.4"
+    denque "^1.4.1"
+    require_optional "^1.0.1"
+    safe-buffer "^5.1.2"
+  optionalDependencies:
+    saslprep "^1.0.0"
+
+mongodb@~3.5.0:
+  version "3.5.10"
+  resolved "https://registry.yarnpkg.com/mongodb/-/mongodb-3.5.10.tgz#ed414988d2935b529004cead6dfdd22681258887"
+  integrity sha512-p/C48UvTU/dr/PQEDKfb9DsCVDJWXGmdJNFC+u5FPmTQVtog69X6D8vrWHz+sJx1zJnd96sjdh9ueo7bx2ILTw==
   dependencies:
     bl "^2.2.0"
     bson "^1.1.4"
