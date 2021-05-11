@@ -36,10 +36,36 @@
     pump "~3.0.0"
     reflect-metadata "~0.1.13"
 
+"@foal/core@^1.12.2":
+  version "1.12.2"
+  resolved "https://registry.yarnpkg.com/@foal/core/-/core-1.12.2.tgz#a27b0daa78cac14302efe4ddf3db2dd18a145a79"
+  integrity sha512-wiJyXeUBYz8ULhD7idJ43wGhCm0K/pFQG6J2BBazqJ/yD9JfDr2zrr/kFbouSnVD7f6RE9i/UnDzilAd3/h61Q==
+  dependencies:
+    ajv "~6.12.0"
+    cookie-parser "~1.4.4"
+    express "~4.17.1"
+    mime "~2.4.4"
+    morgan "~1.10.0"
+    pump "~3.0.0"
+    reflect-metadata "~0.1.13"
+
+"@foal/mongodb@^1.11.0":
+  version "1.12.2"
+  resolved "https://registry.yarnpkg.com/@foal/mongodb/-/mongodb-1.12.2.tgz#8c1093bca20e615531618dbe64f5ca3e2bfd0eb0"
+  integrity sha512-qiJ2kpTtR3lI559mfbzTJSXvSrydFAYQmV694olEEHwi/kFwmFnGP9SAEm1t3Yp33MoLT0GnmpPW1B0U4Hn6BA==
+  dependencies:
+    "@foal/core" "^1.12.2"
+    mongodb "~3.5.0"
+
 "@foal/mongoose@^1.0.0":
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/@foal/mongoose/-/mongoose-1.9.0.tgz#1b514deaf4e397b1e8d6393e8b18cecf246369c1"
   integrity sha512-uooWGlDZ9PMlYBgScjVPxJ20vMN3XyEJYbjX9YQ/McP6Xin9UhOtpN2dV72qRCJg3jgiX8IKSDfnWluqdEx3dA==
+
+"@foal/password@^1.9.0":
+  version "1.12.2"
+  resolved "https://registry.yarnpkg.com/@foal/password/-/password-1.12.2.tgz#334ca9181f690135613e1dc8d51c97483bb30b8f"
+  integrity sha512-h5r5EvdnC9MBv5BmmDBJJccvmamZq1aSrTCkvKneBhVsE4+UhXHfxcBoyO3HcyYZTnScy3WYYfwm9o66U+xtjw==
 
 "@types/color-name@^1.1.1":
   version "1.1.1"
@@ -233,6 +259,14 @@ bl@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/bl/-/bl-2.2.0.tgz#e1a574cdf528e4053019bb800b041c0ac88da493"
   integrity sha512-wbgvOpqopSr7uq6fJrLH8EsvYMJf9gzfo2jCsL2eTy75qXPukA4pCgHamOQkZtY5vmfVtjB+P3LNlMHW5CEZXA==
+  dependencies:
+    readable-stream "^2.3.5"
+    safe-buffer "^5.1.1"
+
+bl@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/bl/-/bl-2.2.1.tgz#8c11a7b730655c5d56898cdc871224f40fd901d5"
+  integrity sha512-6Pesp1w0DEX1N550i/uGV/TqucVL4AM/pgThFSN/Qq9si1/DF9aIHs1BxD8V/QU0HoeHO6cQRTAuYnLPKq1e4g==
   dependencies:
     readable-stream "^2.3.5"
     safe-buffer "^5.1.1"
@@ -1031,9 +1065,9 @@ homedir-polyfill@^1.0.0:
     parse-passwd "^1.0.0"
 
 hosted-git-info@^2.1.4:
-  version "2.8.8"
-  resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.8.8.tgz#7539bd4bc1e0e0a895815a2e0262420b12858488"
-  integrity sha512-f/wzC2QaWBs7t9IYqB4T3sR1xviIViXJRJTWBlx2Gf3g0Xi5vI7Yy4koXQ1c9OYDGHN9sBy1DQ2AB8fqZBWhUg==
+  version "2.8.9"
+  resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.8.9.tgz#dffc0bf9a21c02209090f2aa69429e1414daf3f9"
+  integrity sha512-mxIDAb9Lsm6DoOJ7xH+5+X4y1LU/4Hi50L9C5sIswK3JzULS4bwk1FvjdBgvYR4bzT4tuUQiC15FE2f5HbLvYw==
 
 http-errors@1.7.2:
   version "1.7.2"
@@ -1464,6 +1498,19 @@ mongodb@3.5.9:
   integrity sha512-vXHBY1CsGYcEPoVWhwgxIBeWqP3dSu9RuRDsoLRPTITrcrgm1f0Ubu1xqF9ozMwv53agmEiZm0YGo+7WL3Nbug==
   dependencies:
     bl "^2.2.0"
+    bson "^1.1.4"
+    denque "^1.4.1"
+    require_optional "^1.0.1"
+    safe-buffer "^5.1.2"
+  optionalDependencies:
+    saslprep "^1.0.0"
+
+mongodb@~3.5.0:
+  version "3.5.11"
+  resolved "https://registry.yarnpkg.com/mongodb/-/mongodb-3.5.11.tgz#4f71f7e43637fe021c7a2892b67cfed10d8f0e28"
+  integrity sha512-0a9XI0BbgcUEmB+gykqiUGijUkVflR5B46ZWxTshTQB8yrQlByVSq/5968ojY6iXQ+sDojnuKHnpLBInkZq+6Q==
+  dependencies:
+    bl "^2.2.1"
     bson "^1.1.4"
     denque "^1.4.1"
     require_optional "^1.0.1"
